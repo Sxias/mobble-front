@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>내 피드 - Mobble</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- 로고 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 공통 CSS (예시 경로) -->
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/sidebar.css" />
+
+    <!-- 피드 전용 공통 CSS (네가 준 코드가 들어있는 파일) -->
+    <link rel="stylesheet" href="/css/board-list.css" />
+    <link rel="stylesheet" href="/css/myfeed-list.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          <button
+            id="navToggle"
+            class="nav-trigger hamburger"
+            aria-label="사이드 메뉴 열기"
+          >
+            <span class="line"></span>
+          </button>
+          <a href="/" class="logo">Mobble</a>
+        </div>
+
+        <div class="search-box">
+          <form class="search" action="/search" method="get" role="search">
+            <input
+              class="search-input"
+              type="search"
+              name="q"
+              placeholder="Search..."
+              aria-label="검색어 입력"
+            />
+            <button
+              class="btn-clear"
+              type="button"
+              aria-label="검색어 지우기"
+            ></button>
+            <button class="btn-submit" type="submit" aria-label="검색"></button>
+          </form>
+        </div>
+
+        <button class="join-btn" type="button" onclick="location.href='/write'">
+          WriteBtn Area
+        </button>
+      </div>
+    </header>
+
+    <!-- header 아래, main 위(또는 body 맨 끝) -->
+    <aside id="sidenav" class="sidenav" aria-hidden="true">
+      <nav class="sidenav-nav" aria-label="사이드 내비게이션">
+        <ul>
+          <li><a href="/board-list">Home</a></li>
+          <li><a href="/mypage">My Feed</a></li>
+          <li><a href="/bookmark">Bookmark</a></li>
+          <li><a href="/mypage">My Profile</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div id="sidenavOverlay" class="sidenav-overlay" hidden></div>
+
+    <!-- Main -->
+    <main class="feed-container no-right">
+      <section class="feed-left">
+        <h2>내 피드</h2>
+
+        <article class="post-card">
+          <a class="post-link" href="/boards/1">
+            <div class="thumb"></div>
+            <div class="post-body">
+              <div class="tags">FREE</div>
+              <h3 class="title">제목1</h3>
+              <p class="excerpt">Lorem ipsum dolor sit amet consectetur…</p>
+              <div class="meta">
+                <time datetime="2025-08-28">2025. 08. 28</time>
+                <span>· 3.2k</span>
+                <span>· 108</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a class="post-link" href="/boards/1">
+            <div class="thumb"></div>
+            <div class="post-body">
+              <div class="tags">FREE</div>
+              <h3 class="title">제목1</h3>
+              <p class="excerpt">Lorem ipsum dolor sit amet consectetur…</p>
+              <div class="meta">
+                <time datetime="2025-08-28">2025. 08. 28</time>
+                <span>· 3.2k</span>
+                <span>· 108</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a class="post-link" href="/boards/1">
+            <div class="thumb"></div>
+            <div class="post-body">
+              <div class="tags">FREE</div>
+              <h3 class="title">제목1</h3>
+              <p class="excerpt">Lorem ipsum dolor sit amet consectetur…</p>
+              <div class="meta">
+                <time datetime="2025-08-28">2025. 08. 28</time>
+                <span>· 3.2k</span>
+                <span>· 108</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <nav class="pagination" aria-label="페이지네이션">
+          <a href="#">prev</a>
+          <a href="#">next</a>
+        </nav>
+      </section>
+
+      <!-- ✅ 인기글 aside 완전 삭제 -->
+    </main>
+
+    <footer>
+      <div class="footer-inner">© Footer Content</div>
+    </footer>
+
+    <!-- 규칙 스크립트 -->
+    <script src="/js/sidebar.js" defer></script>
+    <script src="/js/search-clear.js" defer></script>
+  </body>
+</html>
